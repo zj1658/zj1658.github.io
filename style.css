@@ -1,0 +1,287 @@
+/* ============================================================
+   Theme tokens
+   ============================================================ */
+:root {
+  --bg: #ffffff;
+  --surface: #f6f7f9;
+  --text: #1a1a1a;
+  --text-muted: #5a6472;
+  --border: #e4e7ec;
+  --accent: #2563eb;
+  --accent-soft: #dbeafe;
+  --tag-bg: #eef2ff;
+  --tag-text: #4338ca;
+  --max-width: 720px;
+  --radius: 12px;
+}
+
+[data-theme="dark"] {
+  --bg: #0e1116;
+  --surface: #161b22;
+  --text: #e6edf3;
+  --text-muted: #9aa5b1;
+  --border: #262c36;
+  --accent: #6ea8fe;
+  --accent-soft: #17233b;
+  --tag-bg: #1c2333;
+  --tag-text: #a5b4fc;
+}
+
+/* ============================================================
+   Base
+   ============================================================ */
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 4rem 1.5rem 5rem;
+}
+
+/* ============================================================
+   Theme toggle
+   ============================================================ */
+.theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+.theme-toggle:hover { transform: scale(1.08); }
+
+/* ============================================================
+   Hero
+   ============================================================ */
+.hero {
+  display: flex;
+  gap: 1.75rem;
+  align-items: center;
+  margin-bottom: 3.5rem;
+}
+.hero__photo {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  flex-shrink: 0;
+}
+.hero__name {
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 2.4rem;
+  line-height: 1.1;
+  margin: 0 0 0.35rem;
+  letter-spacing: -0.01em;
+}
+.hero__role {
+  margin: 0 0 0.6rem;
+  font-size: 1.05rem;
+  color: var(--text-muted);
+}
+.hero__tagline {
+  margin: 0 0 1rem;
+  color: var(--text);
+}
+.hero__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+  font-size: 0.95rem;
+}
+.hero__links a {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+.hero__links a:hover { color: var(--accent); }
+
+/* ============================================================
+   Sections
+   ============================================================ */
+.section { margin-bottom: 3rem; }
+.section__title {
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 1.5rem;
+  margin: 0 0 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--border);
+}
+.section__note {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-top: -0.4rem;
+}
+
+/* ============================================================
+   Publications
+   ============================================================ */
+.pub-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.pub {
+  display: flex;
+  gap: 1.25rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.pub:last-child { border-bottom: none; }
+.pub__meta {
+  flex-shrink: 0;
+  width: 84px;
+  text-align: right;
+  padding-top: 0.15rem;
+}
+.pub__venue {
+  display: block;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+.pub__year {
+  display: block;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+.pub__body { flex: 1; }
+.pub__title {
+  font-size: 1.05rem;
+  margin: 0 0 0.2rem;
+  line-height: 1.35;
+}
+.pub__authors {
+  margin: 0 0 0.35rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+.pub__links {
+  margin: 0;
+  display: flex;
+  gap: 0.9rem;
+  font-size: 0.9rem;
+}
+
+/* ============================================================
+   Timeline (experience)
+   ============================================================ */
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.timeline__item {
+  display: flex;
+  gap: 1.25rem;
+  padding: 0.85rem 0;
+}
+.timeline__when {
+  flex-shrink: 0;
+  width: 130px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  padding-top: 0.15rem;
+}
+.timeline__what h3 {
+  margin: 0 0 0.15rem;
+  font-size: 1.05rem;
+}
+.timeline__what p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* ============================================================
+   Project cards
+   ============================================================ */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+.card {
+  display: block;
+  padding: 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: inherit;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+.card:hover {
+  text-decoration: none;
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+.card__title { margin: 0 0 0.4rem; font-size: 1.05rem; }
+.card__desc {
+  margin: 0 0 0.75rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+.card__tag {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--tag-text);
+  background: var(--tag-bg);
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+}
+
+/* ============================================================
+   Footer
+   ============================================================ */
+.footer {
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+@media (max-width: 560px) {
+  .container { padding: 3rem 1.25rem 4rem; }
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.25rem;
+  }
+  .hero__links { justify-content: center; }
+  .pub, .timeline__item { flex-direction: column; gap: 0.35rem; }
+  .pub__meta { width: auto; text-align: left; }
+  .pub__venue, .pub__year { display: inline; margin-right: 0.5rem; }
+  .timeline__when { width: auto; }
+}

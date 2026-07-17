@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- EDIT: page title shown in the browser tab and search results -->
+  <title>Your Name — Researcher</title>
+  <!-- EDIT: description used by search engines and link previews -->
+  <meta name="description" content="Personal homepage of Your Name — researcher in [field], currently at [Company]." />
+
+  <!-- Open Graph / social preview (EDIT the url and image once your site is live) -->
+  <meta property="og:title" content="Your Name" />
+  <meta property="og:description" content="Researcher in [field], currently at [Company]." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+    <span class="theme-toggle__icon" aria-hidden="true">☾</span>
+  </button>
+
+  <main class="container">
+    <!-- ============================================================ -->
+    <!-- HEADER                                                       -->
+    <!-- ============================================================ -->
+    <header class="hero">
+      <!-- EDIT: replace profile.jpg with your photo (a square image works best) -->
+      <img class="hero__photo" src="profile.jpg" alt="Photo of Your Name"
+           onerror="this.style.display='none'" />
+      <div class="hero__body">
+        <h1 class="hero__name">Your Name</h1>
+        <!-- EDIT: your current role and affiliation -->
+        <p class="hero__role">Research Scientist at <a href="#">Company</a></p>
+        <!-- EDIT: one-line summary of what you work on -->
+        <p class="hero__tagline">
+          I work on [your area — e.g. machine learning systems, computational biology].
+          Previously PhD in [field] at [University].
+        </p>
+        <nav class="hero__links" aria-label="Profiles and contact">
+          <!-- EDIT each link below; delete any you don't use -->
+          <a href="mailto:you@example.com">Email</a>
+          <a href="https://scholar.google.com/citations?user=XXXX" target="_blank" rel="noopener">Google Scholar</a>
+          <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/yourusername" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="cv.pdf" target="_blank" rel="noopener">CV (PDF)</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ============================================================ -->
+    <!-- ABOUT                                                        -->
+    <!-- ============================================================ -->
+    <section class="section" id="about">
+      <h2 class="section__title">About</h2>
+      <!-- EDIT: 2-3 sentences bridging your PhD research and industry work -->
+      <p>
+        I'm a researcher working at the intersection of [X] and [Y]. At [Company] I focus on
+        [what you build/study and why it matters]. My PhD work at [University] centered on
+        [thesis topic], and I've spent the last five years translating that research into
+        [products / systems / published work] in industry.
+      </p>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- PUBLICATIONS                                                 -->
+    <!-- ============================================================ -->
+    <section class="section" id="publications">
+      <h2 class="section__title">Publications</h2>
+      <p class="section__note">
+        Selected work. See my
+        <a href="https://scholar.google.com/citations?user=XXXX" target="_blank" rel="noopener">Google Scholar</a>
+        for the full list.
+      </p>
+
+      <ol class="pub-list">
+        <!-- EDIT: duplicate a <li> block per paper. Newest first. -->
+        <li class="pub">
+          <div class="pub__meta">
+            <span class="pub__venue">NeurIPS</span>
+            <span class="pub__year">2024</span>
+          </div>
+          <div class="pub__body">
+            <h3 class="pub__title">Title of Your Most Recent Paper</h3>
+            <p class="pub__authors"><strong>Your Name</strong>, Coauthor A, Coauthor B</p>
+            <p class="pub__links">
+              <a href="#" target="_blank" rel="noopener">PDF</a>
+              <a href="#" target="_blank" rel="noopener">arXiv</a>
+              <a href="#" target="_blank" rel="noopener">Code</a>
+            </p>
+          </div>
+        </li>
+
+        <li class="pub">
+          <div class="pub__meta">
+            <span class="pub__venue">ICML</span>
+            <span class="pub__year">2022</span>
+          </div>
+          <div class="pub__body">
+            <h3 class="pub__title">Another Representative Paper</h3>
+            <p class="pub__authors">Coauthor A, <strong>Your Name</strong>, Coauthor C</p>
+            <p class="pub__links">
+              <a href="#" target="_blank" rel="noopener">PDF</a>
+              <a href="#" target="_blank" rel="noopener">arXiv</a>
+            </p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- EXPERIENCE                                                   -->
+    <!-- ============================================================ -->
+    <section class="section" id="experience">
+      <h2 class="section__title">Experience</h2>
+      <ul class="timeline">
+        <!-- EDIT each entry -->
+        <li class="timeline__item">
+          <div class="timeline__when">2021 — Present</div>
+          <div class="timeline__what">
+            <h3>Research Scientist</h3>
+            <p>Company · [one line on what you do there]</p>
+          </div>
+        </li>
+        <li class="timeline__item">
+          <div class="timeline__when">2019 — 2021</div>
+          <div class="timeline__what">
+            <h3>Applied Scientist</h3>
+            <p>Previous Company · [one line]</p>
+          </div>
+        </li>
+        <li class="timeline__item">
+          <div class="timeline__when">20XX — 2019</div>
+          <div class="timeline__what">
+            <h3>Ph.D. in [Field]</h3>
+            <p>University · Advisor: [Name]</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- PROJECTS                                                     -->
+    <!-- ============================================================ -->
+    <section class="section" id="projects">
+      <h2 class="section__title">Selected Projects</h2>
+      <div class="cards">
+        <!-- EDIT each card; delete this section if you don't need it -->
+        <a class="card" href="#" target="_blank" rel="noopener">
+          <h3 class="card__title">Project One</h3>
+          <p class="card__desc">Short description of what it is and why it's interesting.</p>
+          <span class="card__tag">Open source</span>
+        </a>
+        <a class="card" href="#" target="_blank" rel="noopener">
+          <h3 class="card__title">Project Two</h3>
+          <p class="card__desc">Short description of what it is and why it's interesting.</p>
+          <span class="card__tag">Library</span>
+        </a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <!-- EDIT: update the year/name as you like -->
+      <p>© <span id="year"></span> Your Name. Built with plain HTML &amp; CSS.</p>
+    </footer>
+  </main>
+
+  <script>
+    // Current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Dark mode: respect system preference, remember user's choice
+    (function () {
+      const root = document.documentElement;
+      const toggle = document.getElementById('theme-toggle');
+      const icon = toggle.querySelector('.theme-toggle__icon');
+      const stored = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+      function apply(theme) {
+        root.setAttribute('data-theme', theme);
+        icon.textContent = theme === 'dark' ? '☀' : '☾';
+      }
+      apply(stored || (prefersDark ? 'dark' : 'light'));
+
+      toggle.addEventListener('click', function () {
+        const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        apply(next);
+        localStorage.setItem('theme', next);
+      });
+    })();
+  </script>
+</body>
+</html>

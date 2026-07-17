@@ -182,6 +182,12 @@ a:hover { text-decoration: underline; }
   color: var(--text-muted);
   font-size: 0.95rem;
 }
+.pub__note {
+  margin: 0 0 0.35rem;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  font-style: italic;
+}
 .pub__links {
   margin: 0;
   display: flex;

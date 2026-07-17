@@ -234,7 +234,8 @@ a:hover { text-decoration: underline; }
   gap: 1rem;
 }
 .card {
-  display: block;
+  display: flex;
+  flex-direction: column;
   padding: 1.25rem;
   background: var(--surface);
   border: 1px solid var(--border);
@@ -243,7 +244,6 @@ a:hover { text-decoration: underline; }
   transition: border-color 0.15s ease, transform 0.15s ease;
 }
 .card:hover {
-  text-decoration: none;
   border-color: var(--accent);
   transform: translateY(-2px);
 }
@@ -255,12 +255,19 @@ a:hover { text-decoration: underline; }
 }
 .card__tag {
   display: inline-block;
+  align-self: flex-start;
   font-size: 0.78rem;
   font-weight: 600;
   color: var(--tag-text);
   background: var(--tag-bg);
   padding: 0.15rem 0.6rem;
   border-radius: 999px;
+}
+.card__links {
+  margin: 0.85rem 0 0;
+  display: flex;
+  gap: 0.9rem;
+  font-size: 0.9rem;
 }
 
 /* ============================================================
